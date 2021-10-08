@@ -1,15 +1,41 @@
 @php
     $nav_links =[
         [
-           'name'=> 'Home',
+           'name'=> 'Inicio',
            'route'=>  route('home'),
            'active'=> request()->routeIs('home')
         ],
         [
-            'name'=> 'Prueba',
+            'name'=> 'Educación',
            'route'=>  '#',
            'active'=> false
-        ]
+        ],
+        [
+            'name'=> 'Cultura',
+           'route'=>  '#',
+           'active'=> false
+        ],
+        [
+            'name'=> 'Deporte',
+           'route'=>  '#',
+           'active'=> false
+        ],
+        [
+            'name'=> 'Político Sinndical',
+           'route'=>  '#',
+           'active'=> false
+        ],
+        [
+            'name'=> 'Nosotros',
+           'route'=>  '#',
+           'active'=> false
+        ],
+        [
+            'name'=> 'Contactos',
+           'route'=>  '#',
+           'active'=> false
+        ],
+
     ];
 @endphp
 
@@ -139,8 +165,8 @@
                             </x-slot>
                         </x-jet-dropdown>  
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        <a href="{{ route('login') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Iniciar sesión</a>
+                        <a href="{{ route('register') }}" class="bg-red-500 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Regístrate</a>
                     @endauth
                 </div>
             </div>
