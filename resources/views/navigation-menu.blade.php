@@ -7,39 +7,39 @@
         ],
         [
             'name'=> 'Educación',
-           'route'=>  '#',
-           'active'=> false
+           'route'=>  route('educacion'),
+           'active'=> request()->routeIs('educacion')
         ],
         [
             'name'=> 'Cultura',
-           'route'=>  '#',
-           'active'=> false
+           'route'=>  route('cultura'),
+           'active'=> request()->routeIs('cultura')
         ],
         [
             'name'=> 'Deporte',
-           'route'=>  '#',
-           'active'=> false
+           'route'=>  route('deportes'),
+           'active'=> request()->routeIs('deportes')
         ],
         [
             'name'=> 'Político Sinndical',
-           'route'=>  '#',
-           'active'=> false
+           'route'=>  route('polsin'),
+           'active'=> request()->routeIs('polsin')
         ],
         [
             'name'=> 'Nosotros',
-           'route'=>  '#',
-           'active'=> false
+           'route'=>  route('nosotros'),
+           'active'=> request()->routeIs('nosotros')
         ],
         [
             'name'=> 'Contactos',
-           'route'=>  '#',
-           'active'=> false
+           'route'=>  route('contactos'),
+           'active'=> request()->routeIs('contactos')
         ],
 
     ];
 @endphp
 
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 shadow">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-200 shadow">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">

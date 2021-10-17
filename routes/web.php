@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\Pages\ContactController;
+use App\Http\Controllers\Pages\CulturaController;
+use App\Http\Controllers\Pages\DeportesController;
+use App\Http\Controllers\Pages\EducacionController;
+use App\Http\Controllers\Pages\NosotrosController;
+use App\Http\Controllers\Pages\PolsinController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +26,18 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+/* paginas de la aplicacion*/
+
+Route::get('/educacion', [EducacionController::class, 'education'])->name('educacion');
+
+Route::get('/cultura', [CulturaController::class, 'cultura'])->name('cultura');
+
+Route::get('/deportes', [DeportesController::class, 'deportes'])->name('deportes');
+
+Route::get('/politicosindical', [PolsinController::class, 'polsin'])->name('polsin');
+
+Route::get('/nosotros', [NosotrosController::class, 'nosotros'])->name('nosotros');
+
+Route::get('/contactos', [ContactController::class, 'contact'])->name('contactos');
+
