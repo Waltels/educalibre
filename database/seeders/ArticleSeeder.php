@@ -16,7 +16,7 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        $articles = Article::factory(10)->create();
+        $articles = Article::factory(30)->create();
 
         foreach ($articles as $article) {
 

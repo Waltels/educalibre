@@ -26,6 +26,11 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+/* ruta del home de la aplicacion*/
+Route::get('articles/{article}', function ($article) {
+    return "aqui se mostrara el detalle del articulo";
+})->name('article.show');
+
 
 /* paginas de la aplicacion*/
 

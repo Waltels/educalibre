@@ -15,15 +15,32 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name' => 'Normativa'
+            'name' => 'Portada'
+        ]);
+        Category::create([
+            'name' => 'Destacado'
+        ]);
+        Category::create([
+            'name' => 'Editorial'
+        ]);
+        Category::create([
+            'name' => 'Opinion'
+        ]);
+        Category::create([
+            'name' => 'Educacion'
+        ]);
+        Category::create([
+            'name' => 'Cultura'
+        ]);
+        Category::create([
+            'name' => 'Deporte'
         ]);
 
         Category::create([
-            'name' => 'Curriculum'
+            'name' => 'Politico-Sindical'
         ]);
-
         Category::create([
-            'name' => 'Politica'
+            'name' => 'Libre'
         ]);
     }
 }

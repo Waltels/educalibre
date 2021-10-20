@@ -12,53 +12,9 @@
     </div>
     {{-- Espacio para articulos destacados --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="container grid grid-cols-1 lg:grid-cols-3 gap-2">
+        <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div class="col-span-2 ">
-                <h1 class="font-serif font-bold text-3xl px-5 py-3">El Gobierno aprueba la mayor inversión pública de la historia en unos Presupuestos que priorizan el gasto social</h1>
-                <p class="font-serif px-5">Nunca antes la inversión pública y el gasto social habían alcanzado los niveles que se prevén para las cuentas de 2.022.</p>
-                <hr>
-                <p class="px-5"><span class="font-bold" >José Enrique Monrosi</span>  <span>6 Comentarios</span></p>
-                <img  src="{{asset('img/home/nota.jpg')}}" alt="">
-                <p class="px-2 font-serif">Sin casa, sin trabajo y sin expectativas. La realidad de los jóvenes en España está lejos de ser idílica. El 38% de los menores de 25 años está en paro y más del 80% no puede emanciparse. A finales de 2020 tan solo un 15,8 % de los jóvenes entre 16 y 29 años habían logrado abandonar el hogar de su padres y madres, la peor cifra desde el año 1999 según datos del Consejo de la Juventud de España.</p>
-                <hr>
-                <div>
-                    <div class="container grid grid-cols-1 lg:grid-cols-2 gap-2 py-2">
-                        <div class="bg-red-200">
-                            <img class="bg-cover" src="{{asset('img/home/nota.jpg')}}" alt="">
-                        </div>
-                        <div>
-                            <p class="font-serif text-3xl px-3">El Gobierno se lanza a "democratizar" con becas la carrera judicial en pleno bloqueo del PP al CGPJ</p>
-                            <p class="px-3"><span class="font-bold" >José Enrique Monrosi</span>  <span>6 Comentarios</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="container grid grid-cols-1 lg:grid-cols-2 gap-2 py-2">
-                        <div class="bg-red-200">
-                            <img class="bg-cover" src="{{asset('img/home/nota.jpg')}}" alt="">
-                        </div>
-                        <div>
-                            <p class="font-serif text-3xl px-3">El Gobierno se lanza a "democratizar" con becas la carrera judicial en pleno bloqueo del PP al CGPJ</p>
-                            <p class="px-3"><span class="font-bold" >José Enrique Monrosi</span>  <span>6 Comentarios</span></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <h1 class="font-serif text-3xl px-3 py-2">Montero dice que los Presupuestos cuentan con "holgura" para prorrogar las medidas fiscales contra el alza de la luz</h1>
-                <hr>
-                <div>
-                    <div class="container grid grid-cols-1 lg:grid-cols-2 gap-2 py-2">
-                        <div class="bg-red-200">
-                            <img class="bg-cover" src="{{asset('img/home/nota.jpg')}}" alt="">
-                        </div>
-                        <div>
-                            <p class="font-serif text-3xl px-3">El Gobierno se lanza a "democratizar" con becas la carrera judicial en pleno bloqueo del PP al CGPJ</p>
-                            <p class="px-3"><span class="font-bold" >José Enrique Monrosi</span>  <span>6 Comentarios</span></p>
-                        </div>
-                    </div>
-                </div>
-            
-            
+                 @livewire('articles-index')
             </div>
             {{-- Sección de la publicidad--}}
             <div class=" bg-gray-100 py-8">
@@ -85,36 +41,25 @@
         <hr>
         {{-- ESPACIO PATA LA CATEGORIA EDUCACION--}}
         <div >
-            <h1>Categoria educación</h1>
-            <div class="container grid grid-cols-1 lg:grid-cols-3 gap-2">
-                <div class="bg-red-200">
-                    <p>bloque 1</p>
-                </div>
-                <div class="bg-red-400">
-                    <p>BLOUQE 2</p>
-                </div>
-                <div class="bg-red-400">
-                    <p>BLOUQE 3</p>
-                </div>
-            </div>
+            @livewire('educacion-index')
         </div>
         {{-- ESPACIO PATA LA CATEGORIA DEPORTES--}}
         <hr>
         <div >
             <h1>Categoria Deportes</h1>
-            <div class="container grid grid-cols-1 lg:grid-cols-3 gap-2">
-                <div class="bg-red-200">
-                    <p>bloque 1</p>
-                </div>
-                <div class="bg-red-400">
-                    <p>BLOUQE 2</p>
-                </div>
-                <div class="bg- bg-red-600">
-                    <p>bloque 3</p>
-                </div>
-            </div>
+            
         </div>
+
+
+
+
+
+
         
+        <!--Bpestañas-->
+ 
+
+
         
         <!--Boton de ir hacia arriba-->
         <div id="button-up">
@@ -122,9 +67,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
             </svg>
         </div>
-
-
-
+        
     </div>
 </section>    
 </x-app-layout>

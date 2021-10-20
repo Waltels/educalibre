@@ -15,6 +15,11 @@ class Article extends Model
     const REVISION = 2;
     const PUBLICADO = 3;
 
+    public function getRouteKeyName()
+    {
+       return "slug";
+    }
+
     //Relacion uno a muchos inversa
 
     public function teacher(){
