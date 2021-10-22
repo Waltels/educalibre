@@ -21,7 +21,7 @@
            'active'=> request()->routeIs('deportes')
         ],
         [
-            'name'=> 'Político Sinndical',
+            'name'=> 'Político Sindical',
            'route'=>  route('polsin'),
            'active'=> request()->routeIs('polsin')
         ],

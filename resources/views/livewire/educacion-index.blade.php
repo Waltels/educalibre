@@ -1,32 +1,24 @@
 <div>
-    <div class="grid grid-cols-1 divide-y divide-red-500">
-        <div>
-            <h1 class="text-2xl text-red-600">Categoria educación</h1>
-        </div>       
-    </div>
-    <div class="rounded container grid grid-cols-1 lg:grid-cols-3 gap-4   border-gray-600">
-        @foreach ($educacions as $educacion)
-        <div class="border-2 rounded  bg-gray-100">
-            <div class="w-full flex justify-between p-3 ">
-                <div class="flex">
-                <div class="rounded-full h-8 w-8 bg-gray-500 flex items-center justify-center overflow-hidden">
-                    <img src="https://avatars0.githubusercontent.com/u/38799309?v=4" alt="profilepic">
+    <div class="container grid grid-cols-1 lg:grid-cols-5 gap-2 px-0">
+        <div class="col-span-4 divide-y divide-red-500">
+            @foreach ($educacions as $educacion)
+            <div class="container grid grid-cols-1 lg:grid-cols-4 gap-0 px-0 py-2">
+                <div class="col-span-2">
+                    <img class="h-60 w-full bg-cover" src="{{Storage::url($educacion->image->url)}}" alt="">
                 </div>
-                <span class="pt-1 ml-2 font-bold text-sm">{{$educacion->teacher->name}}</span>
-                </div>
-                <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="fas fa-ellipsis-h pt-2 text-lg"></i>555</span>
-            </div>
-            <img class="h-60 w-full bg-cover" src="{{Storage::url($educacion->image->url)}}">
-            <div class="px-2 pb-2">
-                <div class="pt-1">
-                    <div>
-                        <span class="font-serif text-3xl px-2 py-3 leading-6">{{$educacion->title}}</span>
+                <div class="relative col-span-2 ">
+                    <a class="hover:text-purple-800 hover:underline " href="{{route('article.show', $educacion)}}"><h3 class="font-serif text-3xl mt-2 px-3 leading-7">{{$educacion->title}}</h3></a>
+                    <p class="text-gray-800 font-serif py-4 px-3 leading-4">{{$educacion->subtitle, 100}}</p>
+                    <div class="absolute bottom-0 px-3">
+                        <p><a href="{{route('educacion')}}"><span>Educacion </span></a>|<span class="font-bold"> {{$educacion->teacher->name}}</span>|<span>{{$educacion->created_at}}</span></p>
                     </div>
                 </div>
-                
-                <div class="text-sm mb-2 text-gray-700 cursor-pointer font-medium mt-3 ">10 de octubre de 2021</div>
             </div>
-        </div> 
-        @endforeach 
+            @endforeach
+            <div  class="divide-y divide-red-500"></div>
+            </div>
+            <div class=" bg-gray-400">
+            </div>
+        </div>
     </div>
 </div>

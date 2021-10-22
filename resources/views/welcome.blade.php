@@ -41,14 +41,11 @@
         <hr>
         {{-- ESPACIO PATA LA CATEGORIA EDUCACION--}}
         <div >
-            @livewire('educacion-index')
+            @livewire('secciones-index')
         </div>
         {{-- ESPACIO PATA LA CATEGORIA DEPORTES--}}
         <hr>
-        <div >
-            <h1>Categoria Deportes</h1>
-            
-        </div>
+
 
 
 

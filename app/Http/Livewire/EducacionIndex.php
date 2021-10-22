@@ -10,8 +10,7 @@ class EducacionIndex extends Component
 {
     public function render()
     {
-        $categories = Category::orderBy('name')->get();
-        $educacions = Article::where('category_id', 5)->latest('id')->paginate(3);
-        return view('livewire.educacion-index', compact('categories','educacions'));
+        $educacions = Article::where('category_id', 5)->latest('id')->paginate(10);
+        return view('livewire.educacion-index', compact('educacions'));
     }
 }
