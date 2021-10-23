@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
+            $table->string('desfoto');
             $table->text('description');
             $table->enum('status', [Article::BORRADOR, Article::REVISION, Article::PUBLICADO])->default(Article::BORRADOR);
             $table->string('slug');

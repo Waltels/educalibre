@@ -22,7 +22,7 @@
     @foreach ($editorials as $editorial)
     <hr>
         <h1 class="text-2xl text-red-600 mt-2">Editorial</h1>
-        <a class="hover:text-purple-800" href="{{route('article.show', $editorial)}}"><h1 class="font-serif text-3xl px-3 mb-2">{{$editorial->title}}</h1></a>
+        <a class="hover:text-purple-800" href="{{route('article.editorial', $editorial)}}"><h1 class="font-serif text-3xl px-3 mb-2">{{$editorial->title}}</h1></a>
         <hr>
     @endforeach
     @foreach ($opinions as $opinion)
@@ -32,7 +32,7 @@
                     <img class="h-48 w-full bg-cover" src="{{Storage::url($opinion->image->url)}}" alt="">
                 </div>
                 <div>
-                    <a class="hover:text-purple-800" href="{{route('article.show', $opinion)}}"><p class="font-serif text-3xl px-3">{{$opinion->title}}</p></a>
+                    <a class="hover:text-purple-800" href="{{route('article.editorial', $opinion)}}"><p class="font-serif text-3xl px-3">{{$opinion->title}}</p></a>
                     <p class="px-3"><span class="font-bold" >{{$opinion->teacher->name}}</span>  <span>6 Comentarios</span></p>
                 </div>
             </div>

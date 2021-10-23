@@ -28,6 +28,7 @@ class ArticleFactory extends Factory
         return [
             'title' => $title,
             'subtitle' => $this->faker->sentence(),
+            'desfoto' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
             'status' => $this->faker->randomElement([Article::BORRADOR, Article::REVISION, Article::PUBLICADO]),
             'slug' => Str::slug($title),

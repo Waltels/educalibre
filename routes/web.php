@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\Pages\ContactController;
 use App\Http\Controllers\Pages\CulturaController;
 use App\Http\Controllers\Pages\DeportesController;
@@ -27,9 +28,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 /* ruta del home de la aplicacion*/
-Route::get('articles/{article}', function ($article) {
-    return "aqui se mostrara el detalle del articulo";
-})->name('article.show');
+Route::get('users/{editorial}', [ArticlesController::class, 'editorial'])->name('article.editorial');
+Route::get('articles/{article}', [ArticlesController::class, 'show'])->name('article.show');
 
 
 /* paginas de la aplicacion*/
