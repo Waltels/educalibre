@@ -1,6 +1,10 @@
 <?php
+
+use App\Http\Controllers\Editor\ArticlesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\EditorArticles;
 
 Route::redirect('', 'editor/articles');
-Route::get('articles', EditorArticles::class)->name('articles.index');
+
+Route::resource('articles', ArticlesController::class)->names('articles');
+

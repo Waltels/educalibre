@@ -247,12 +247,21 @@ return [
             'text'        => 'Escritorio',
             'route'         => 'admin.home',
             'icon'        => 'fas fa-fw fa-tachometer-alt',
+            'can'          =>'Ver dashboard'
         ],
         [
             'text'        => 'Lista de roles',
-            'route'         => 'admin.roles.index',
+            'route'       => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-users-cog',
-            'active'        => ['admin/roles*']
+            'can'         => 'Listar role',
+            'active'      => ['admin/roles*']
+        ],
+        [
+            'text'        => 'Lista de Usuario',
+            'route'       => 'admin.users.index',
+            'icon'        => 'fas fa-fw fa-users',
+            'can'         => 'Leer usuarios',
+            'active'      => ['admin/users*']
         ],
         ['header' => 'account_settings'],
         [
@@ -473,5 +482,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
