@@ -1,9 +1,10 @@
 <x-app-layout>
     <section class="grid grid-cols-1 lg:grid-cols-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-4 py-4">
         <figure class="col-span-4 px-3">
-            <div class="flex divide-y">
-                <h4>{{$article->category->name}} </h4>
-                <i class="material-icons">spoke</i> <p class="text-red-600 font-bold">  ------------------------</p>
+            <div class="flex">
+                <i class="material-icons text-red-500">storage</i>
+                      <h4 class="text-red-600 font-bold">-- {{$article->category->name}} </h4>
+                <i class="material-icons text-red-500">chevron_right</i>
             </div> 
             <h2 class=" leading-10 py-2 font-bold font-serif">{{$article->title}}</h2>
             <p class=" leading-8 text-xl font-serif">{{$article->subtitle}}</p>

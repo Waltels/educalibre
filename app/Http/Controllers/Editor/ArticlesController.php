@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Editor;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -25,7 +26,8 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('editor.articles.create');
+        $categories =Category::pluck('name', 'id');
+        return view('editor.articles.create', compact('categories'));
     }
 
     /**
@@ -58,7 +60,8 @@ class ArticlesController extends Controller
      */
     public function edit(Article $article)
     {
-        return view('editor.articles.edit', compact('article'));
+        $categories =Category::pluck('name', 'id');
+        return view('editor.articles.edit', compact('article', 'categories'));
     }
 
     /**
