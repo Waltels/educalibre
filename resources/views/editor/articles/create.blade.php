@@ -5,7 +5,9 @@
                 <h1 class="text-2xl font-bold"> CREAR NUEVO ARTICULO
                     <hr class="mt-2 mb-6">
                 </h1>
-                {!! Form::open(['route'=> 'editor.articles.store']) !!}
+                {!! Form::open(['route'=> 'editor.articles.store', 'files'=>true, 'autocomplete'=>'off']) !!}
+
+                {!! Form::hidden('user_id', auth()->user()->id) !!}
 
                     @include('editor.articles.partials.form')
 

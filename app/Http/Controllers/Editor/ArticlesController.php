@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArticlesController extends Controller
 {
@@ -38,7 +39,25 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'slug' => 'required|unique:articles',
+            'subtitle' => 'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'desfoto' => 'required',
+        ]);
+
+       $article = Article::create($request->all());
+        
+
+        if ($request->file('file')) {
+            $url = Storage::put('public/articles', $request->file('file'));
+            $article->image()->create([
+                'url' => $url
+            ]);
+         }
+         return redirect()->route('editor.articles.edit', $article);
     }
 
     /**
