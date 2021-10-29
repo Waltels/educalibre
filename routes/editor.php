@@ -8,3 +8,5 @@ Route::redirect('', 'editor/articles');
 
 Route::resource('articles', ArticlesController::class)->names('articles');
 
+Route::post('articles/{article}/status', [ArticlesController::class, 'status'])->name('articles.status');
+

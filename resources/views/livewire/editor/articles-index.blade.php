@@ -1,6 +1,7 @@
 <div class="container py-3">
     <!-- This example requires Tailwind CSS v2.0+ -->
     <x-table-responsive>
+        <h3 class="text-center font-bold">MIS PUBLICACIONES</h3>
         <div class="px-6 py-4 flex">
             <input wire:keydown='limpiar_page' wire:model='search' class="py-2 px-3 border border-gray-500 focus:outline-none focus:ring-indigo-700 focus:border-indigo-700 rounded-md sm:text-sm w-full flex-1 shadow-sm" placeholder="Ingrese el título de un artíclulo...">
             <a class="btn btn-danger ml-2" href="{{route('editor.articles.create')}}">Crear nuevo Arículo</a>
@@ -42,10 +43,10 @@
                                 </div>
                                 <div class="ml-4">
                                     <div class="text-sm font-medium text-gray-900">
-                                        {{$article->title}}
+                                        {{Str::limit($article->title, 80)}}
                                     </div>
                                     <div class="text-sm text-gray-500">
-                                        {{$article->subtitle, 60}}
+                                     {{Str::limit($article->subtitle, 80)}}
                                     </div>
                                 </div>
                             </div>

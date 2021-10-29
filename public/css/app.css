@@ -1164,11 +1164,11 @@ select {
 .col-span-2 {
 	grid-column: span 2 / span 2;
 }
-.col-span-3 {
-	grid-column: span 3 / span 3;
-}
 .col-span-1 {
 	grid-column: span 1 / span 1;
+}
+.col-span-3 {
+	grid-column: span 3 / span 3;
 }
 .float-right {
 	float: right;
@@ -1283,11 +1283,11 @@ select {
 .ml-auto {
 	margin-left: auto;
 }
-.mt-0 {
-	margin-top: 0px;
-}
 .mb-2 {
 	margin-bottom: 0.5rem;
+}
+.mt-0 {
+	margin-top: 0px;
 }
 .mt-14 {
 	margin-top: 3.5rem;
@@ -1361,6 +1361,9 @@ select {
 .h-60 {
 	height: 15rem;
 }
+.h-64 {
+	height: 16rem;
+}
 .h-auto {
 	height: auto;
 }
@@ -1369,9 +1372,6 @@ select {
 }
 .h-48 {
 	height: 12rem;
-}
-.h-64 {
-	height: 16rem;
 }
 .min-h-screen {
 	min-height: 100vh;
@@ -1498,14 +1498,14 @@ select {
 .grid-cols-1 {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.grid-cols-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .grid-cols-2 {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-5 {
 	grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-.grid-cols-3 {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-col {
 	flex-direction: column;
@@ -1666,6 +1666,10 @@ select {
 	--tw-border-opacity: 1;
 	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
 }
+.border-red-600 {
+	--tw-border-opacity: 1;
+	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
+}
 .border-blue-500 {
 	--tw-border-opacity: 1;
 	border-color: rgba(59, 130, 246, var(--tw-border-opacity));
@@ -1677,10 +1681,6 @@ select {
 .border-indigo-500 {
 	--tw-border-opacity: 1;
 	border-color: rgba(99, 102, 241, var(--tw-border-opacity));
-}
-.border-red-600 {
-	--tw-border-opacity: 1;
-	border-color: rgba(220, 38, 38, var(--tw-border-opacity));
 }
 .border-gray-500 {
 	--tw-border-opacity: 1;
@@ -1916,11 +1916,11 @@ select {
 .pb-8 {
 	padding-bottom: 2rem;
 }
-.pb-2 {
-	padding-bottom: 0.5rem;
-}
 .pl-2 {
 	padding-left: 0.5rem;
+}
+.pb-2 {
+	padding-bottom: 0.5rem;
 }
 .text-left {
 	text-align: left;
@@ -2084,6 +2084,18 @@ select {
 .text-blue-700 {
 	--tw-text-opacity: 1;
 	color: rgba(29, 78, 216, var(--tw-text-opacity));
+}
+.text-red-300 {
+	--tw-text-opacity: 1;
+	color: rgba(252, 165, 165, var(--tw-text-opacity));
+}
+.text-blue-800 {
+	--tw-text-opacity: 1;
+	color: rgba(30, 64, 175, var(--tw-text-opacity));
+}
+.text-green-300 {
+	--tw-text-opacity: 1;
+	color: rgba(110, 231, 183, var(--tw-text-opacity));
 }
 .text-red-700 {
 	--tw-text-opacity: 1;

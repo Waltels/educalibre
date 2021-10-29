@@ -1,11 +1,13 @@
 <div>
     @foreach ($articles as $article)
-        <a class="hover:text-purple-800" href="{{route('article.show', $article)}}"><h1 class="font-serif font-bold text-3xl px-5 py-3 ">{{$article->title}}</h1></a>
-        <p class="font-serif px-5">{{$article->subtitle}}</p>
+        <a class="hover:text-purple-800" href="{{route('article.show', $article)}}"><h1 class="font-serif font-bold text-3xl px-2 py-3 ">{{$article->title}}</h1></a>
+        <p class="font-serif px-2">{{Str::limit($article->subtitle, 160)}}</p>
         <hr>
-        <p class="px-5"><span class="font-bold" >{{$article->teacher->name}}</span>  <span>6 Comentarios</span></p>
+        <p class="px-2"><span class="font-bold" >{{$article->teacher->name}}</span>  <span>6 Comentarios</span></p>
         <img class="h-100 w-full bg-cover" src="{{Storage::url($article->image->url)}}" alt="">
-        <p class="px-2 font-serif">{{$article->description}}</p>
+        <div class="py-2 px-2 font-serif">
+            {!!Str::limit($article->description, 300)!!}
+        </div>
         <hr>
     @endforeach
     @foreach ($destacados as $destacado)

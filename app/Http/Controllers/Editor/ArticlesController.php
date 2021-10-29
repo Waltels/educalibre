@@ -46,6 +46,7 @@ class ArticlesController extends Controller
             'description' => 'required',
             'category_id' => 'required',
             'desfoto' => 'required',
+            'file' => 'image',
         ]);
 
        $article = Article::create($request->all());
@@ -92,7 +93,32 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'slug' => 'required|unique:articles,slug,'. $article->id,
+            'subtitle' => 'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'desfoto' => 'required',
+            'file' => 'image',
+        ]);
+
+        $article->update($request->all());
+        if ($request->file('file')) {
+            $url = Storage::put('public/articles', $request->file('file'));
+            if ($article->image) {
+                Storage::delete($article->image->url);
+                $article->image->update([
+                    'url' => $url
+                ]);
+            }else{
+                $article->image->create([
+                    'url' => $url
+                ]);
+            }
+        }
+
+        return redirect()->route('editor.articles.edit', $article);
     }
 
     /**
@@ -104,5 +130,21 @@ class ArticlesController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function status(Article $article){
+        
+
+        $article->status = 2;
+        $article->save();
+
+        return back();
+        /*if ($article->obsarticle) {
+            $article->obsarticle->delete();
+        }
+
+        return redirect()->route('editor.articles.edit', $article);*/
+
+        
     }
 }

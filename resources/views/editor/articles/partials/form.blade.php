@@ -53,5 +53,8 @@
         @enderror
         <p class="mt-4">Seleccione la imagen destacada del artículo que decea publicar</p>
         {!! Form::file('file', ['class'=>'form-input w-full'. ($errors->has('file') ? ' border-red-600' : ''), 'id'=>'file', 'accept'=>'image/*']) !!}
+        @error('file')
+        <strong class="text-sm text-red-600">{{$message}}</strong>
+        @enderror
     </div>
 </div>
