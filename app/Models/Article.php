@@ -20,6 +20,12 @@ class Article extends Model
        return "slug";
     }
 
+    //Relacion uno a uno
+
+    public function observation(){
+        return $this->hasOne('App\Models\Observation');
+    }
+
     //Relacion uno a muchos inversa
 
     public function teacher(){

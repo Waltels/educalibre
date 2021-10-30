@@ -44,12 +44,14 @@
                 <aside>
                     <h1 class="font-bold text-xl mb-4 text-center">Edición del Artículo</h1>
                     <ul class="py-2">
-                        <li class="leading-7 mb-1 border-l-4 border-indigo-400  pl-2 py-2">
+                        <li class="leading-7 mb-1 border-l-4 @routeIs('editor.articles.edit', $article) border-indigo-400 @else border-transparent @endif  pl-2 py-2">
                             <a href="{{route('editor.articles.edit', $article)}}">Información del Artículo</a>
                         </li>
-                        <li class="leading-7 mb-1 border-l-4 border-transparent pl-2 py-2">
-                            <a href="#">Observaciones del Artículo</a>
-                        </li> 
+                        @if ($article->observation)
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('editor.articles.observation', $article) border-indigo-400 @else border-transparent @endif pl-2">
+                                <a href="{{route('editor.articles.observation', $article)}}">Observaciones del Artículo</a>
+                            </li>
+                        @endif   
                     </ul>
                     @switch($article->status)
                     @case(1)

@@ -10,3 +10,5 @@ Route::resource('articles', ArticlesController::class)->names('articles');
 
 Route::post('articles/{article}/status', [ArticlesController::class, 'status'])->name('articles.status');
 
+Route::get('articles/{article}/observation', [ArticlesController::class, 'observation'])->name('articles.observation');
+
