@@ -15,7 +15,7 @@
             <div class="container grid grid-cols-1 lg:grid-cols-2 gap-2 py-2 ">
                 <img class="h-48 w-full bg-cover " src="{{Storage::url($destacado->image->url)}}" alt="">
                 <div>
-                    <a class="hover:text-purple-800" href="{{route('article.show', $destacado)}}"><p class="font-serif text-3xl px-3 ">{{$destacado->title}}</p></a>
+                    <a class="hover:text-purple-800" href="{{route('article.show', $destacado)}}"><p class="text-gray-800 font-serif text-3xl px-3 ">{{$destacado->title}}</p></a>
                     <p class="px-3"><span class="font-bold" >{{$destacado->teacher->name}}</span>  <span>6 Comentarios</span></p>
                 </div>
             </div>

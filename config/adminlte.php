@@ -269,6 +269,12 @@ return [
             'route'       => 'admin.articles.index',
             'icon'        => 'fas fa-fw fa-user',
         ],
+        ['header' => 'CONTACTOS'],
+        [
+            'text'        => 'Solicitud de Contactos',
+            'route'       => 'contacts.index',
+            'icon'        => 'fas fa-fw fa-user',
+        ],
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',

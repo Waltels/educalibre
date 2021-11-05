@@ -32,8 +32,8 @@
         ],
         [
             'name'=> 'Contactos',
-           'route'=>  route('contactos'),
-           'active'=> request()->routeIs('contactos')
+           'route'=>  route('contacts.create'),
+           'active'=> request()->routeIs('contacts')
         ],
 
     ];

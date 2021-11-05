@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/boton.css') }}">
         <link rel="stylesheet" href="{{asset('css/material-dashboard.css?v=2.2.2')}}">
+        <link rel="stylesheet" href="{{asset('css/adminlte.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}">
         <!--     Fonts and icons     -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -27,6 +30,7 @@
         <script src="{{ asset('js/boton.js') }}" defer></script>
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-material-design.min.js')}}"></script>
+        <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
         
 
 

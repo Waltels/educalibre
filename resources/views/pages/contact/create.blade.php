@@ -3,45 +3,40 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="container grid grid-cols-1 lg:grid-cols-5 gap-2 py-3">
                 <div class="col-span-2">
+                    @if (session('info'))
+                        <div class="bg-green-600 shadow-md rounded pt-6 pb-8 mb-4 px-2">
+                            
+                            {{session('info')}}
+                        </div>  
+                        @endif
                     <h1 class="text-blue-700 text-2xl px-2 py-4">Formulario de contacto</h1>
-                    <div class="">
-                        <form class="bg-white shadow-md rounded pt-6 pb-8 mb-4 px-2" action="{{route('contactos.store')}}" method="POST">
-                          <div class="mb-2">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                              Nombre
-                            </label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text">
-                          </div>
-                          <div class="mb-2">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                              Correo
-                            </label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text">
-                          </div>
-                          <div class="mb-2">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                              N° de Teléfomo
-                            </label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text">
-                          </div>
-                          <div class="mb-2">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                              Asunto
-                            </label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" >
-                          </div>
-                          <div class="mb-2">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                              Menzaje
-                            </label>
-                            <textarea class="form-textarea mt-1 block w-full rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3" ></textarea>
-                          </div>
-                          <div class="flex items-center justify-between">
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                              Enviar
-                            </button>
-                          </div>
-                        </form>
+                    <div>
+                        {!! Form::open(['route'=> 'contacts.store','class'=> 'bg-white shadow-md rounded pt-6 pb-8 mb-4 px-2']) !!}
+                            <div class="mb-2">
+                                {!! Form::label('name', 'Nombre',['class'=> 'block text-gray-700 text-sm font-bold mb-2']) !!}
+                                {!! Form::text('name', null,['class'=> 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline']) !!}
+                            </div>
+                            <div class="mb-2">
+                                {!! Form::label('email', 'Correo',['class'=> 'block text-gray-700 text-sm font-bold mb-2']) !!}
+                                {!! Form::email('email', null, ['class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline']) !!}
+                            </div>
+                            <div class="mb-2">
+                                {!! Form::label('tel', 'N° de Teléfono',['class'=> 'block text-gray-700 text-sm font-bold mb-2']) !!}
+                                {!! Form::text('tel', null,['class'=> 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline']) !!}
+                            </div>
+                            <div class="mb-2">
+                                {!! Form::label('asunto', 'Asunto',['class'=> 'block text-gray-700 text-sm font-bold mb-2']) !!}
+                                {!! Form::text('asunto', null,['class'=> 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline']) !!}
+                            </div>
+                            <div class="mb-2">
+                                {!! Form::label('detalle', 'Mensaje',['class'=> 'block text-gray-700 text-sm font-bold mb-2']) !!}
+                                {!! Form::textarea('detalle', null, ['class'=> 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', 'rows'=>'3']) !!}
+                            </div>
+                            <div class="flex items-center justify-between">
+                                {!! Form::submit('enviar', ['class'=> 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline']) !!}
+
+                            </div>
+                        {!! Form::close() !!}
                         <p class="text-center text-gray-500 text-xs">
                           &copy;2020 Acme Corp. All rights reserved.
                         </p>

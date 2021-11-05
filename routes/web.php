@@ -44,5 +44,7 @@ Route::get('/politicosindical', [PolsinController::class, 'polsin'])->name('pols
 
 Route::get('/nosotros', [NosotrosController::class, 'nosotros'])->name('nosotros');
 
-Route::get('/contactos', [ContactController::class, 'contact'])->name('contactos');
+/*Route::get('/contactos', [ContactController::class, 'contact'])->name('contactos');*/
 
+Route::resource('/contactos', ContactController::class)->names('contacts');
+/*Route::post('/contactos', [ContactController::class, 'store'])->name('contactos.store');*/

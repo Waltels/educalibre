@@ -36,6 +36,10 @@ class Article extends Model
         return $this->belongsTo('App\Models\Category');
     }
 
+    public function contact(){
+        return $this->belongsTo('App\Models\Contact');
+    }
+
     //Relacion muchos a muchos
     public function students(){
         return $this->belongsToMany('App\Models\User', 'user_id');
