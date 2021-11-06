@@ -59,7 +59,7 @@
                                         </div>
                                         <span class="pt-1 ml-2 font-bold text-sm">{{$educacion->teacher->name}}</span>
                                         </div>
-                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="fas fa-ellipsis-h pt-2 text-lg"></i>555</span>
+                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="material-icons pt-2 text-lg">auto_stories</i></span> 
                                     </div>
                                     <img class="h-60 w-full bg-cover" src="{{Storage::url($educacion->image->url)}}">
                                     <div class="px-2 pb-2">
@@ -86,7 +86,7 @@
                                         </div>
                                         <span class="pt-1 ml-2 font-bold text-sm">{{$cultura->teacher->name}}</span>
                                         </div>
-                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="fas fa-ellipsis-h pt-2 text-lg"></i>555</span>
+                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="material-icons pt-2 text-lg">history_edu</i></span>
                                     </div>
                                     <img class="h-60 w-full bg-cover" src="{{Storage::url($cultura->image->url)}}">
                                     <div class="px-2 pb-2">
@@ -113,7 +113,7 @@
                                         </div>
                                         <span class="pt-1 ml-2 font-bold text-sm">{{$deporte->teacher->name}}</span>
                                         </div>
-                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="fas fa-ellipsis-h pt-2 text-lg"></i>555</span>
+                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="material-icons pt-2 text-lg">sports_baseball</i></span>
                                     </div>
                                     <img class="h-60 w-full bg-cover" src="{{Storage::url($deporte->image->url)}}">
                                     <div class="px-2 pb-2">
@@ -140,7 +140,7 @@
                                         </div>
                                         <span class="pt-1 ml-2 font-bold text-sm">{{$polsin->teacher->name}}</span>
                                         </div>
-                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="fas fa-ellipsis-h pt-2 text-lg"></i>555</span>
+                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="material-icons pt-2 text-lg">settings_accessibility</i></span>
                                     </div>
                                     <img class="h-60 w-full bg-cover" src="{{Storage::url($polsin->image->url)}}">
                                     <div class="px-2 pb-2">
@@ -167,7 +167,7 @@
                                         </div>
                                         <span class="pt-1 ml-2 font-bold text-sm">{{$libre->teacher->name}}</span>
                                         </div>
-                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="fas fa-ellipsis-h pt-2 text-lg"></i>555</span>
+                                        <span class="px-2 hover:bg-gray-300 cursor-pointer rounded"><i class="material-icons pt-2 text-lg">leak_add</i></span>
                                     </div>
                                     <img class="h-60 w-full bg-cover" src="{{Storage::url($libre->image->url)}}">
                                     <div class="px-2 pb-2">

@@ -3,18 +3,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
             <div class="container grid grid-cols-1 lg:grid-cols-5 gap-6">
                 <div class="bg-gray-300">
-                    <h1 class="text-2xl text-center py-4">Nosotros</h1>
-                    <hr>
+                    <h1 class="text-2xl text-center mt-2">Nosotros</h1>
                     <ul>
-                        <a  href="#sec1"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-4"> Vision y Misión</li></a>
-                        <a  href="#sec2"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-4">Organización</li></a>
-                        <a  href="#sec3"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-4">Objetivos</li></a>
-                        <a  href="#sec4"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-4">Nuestros Asociados</li></a>
-                        <a  href="#sec5"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-4">Testimonios</li></a>
-                        <a  href="#sec6"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-4">Quienes noy Apoyan</li></a>
+                        <a  href="#sec1"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-2"> Vision y Misión</li></a>
+                        <a  href="#sec2"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-2">Organización</li></a>
+                        <a  href="#sec3"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-2">Objetivos</li></a>
+                        <a  href="#sec4"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-2">Nuestros Asociados</li></a>
+                        <a  href="#sec5"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-2">Testimonios</li></a>
+                        <a  href="#sec6"><li class=" text-center hover:text-white bg-gray-300  hover:bg-gray-700 py-2">Quienes noy Apoyan</li></a>
                         
                     </ul>
-                    <div class="py-5 ">
+                    <div class="py-2 ">
                         <img class="mx-auto" src="{{asset('/img/home/logo2b.png')}}" alt="" style="width: 90px;">
                     </div>
                 </div>
@@ -24,61 +23,65 @@
                 </div>
             </div>
             {{-- Sección de la VISION Y MISION--}}
-            <div id="sec1" class="bg-gray-400 mt-6">
-                <h1 class="text-center text-2xl py-3">VISIÓN Y MISION INSTITUCIONAL</h1>
-                <div class="container grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 py-6">
-                    <div class="bg-red-500 rounded-xl px-3">
-                        <h1 class="text-center mt-3">MISION</h1>
-                        <p class="py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, culpa voluptate incidunt enim modi eaque minima cupiditate consequatur nihil ab quo consequuntur esse commodi recusandae perferendis repellendus asperiores inventore adipisci.</p>
+            <div id="sec1" class="bg-gray-800 mt-2">
+                <h3 class="text-white text-center text-2xl py-3">MISION Y VISIÓN INSTITUCIONAL</h3>
+                <div class="container grid grid-cols-1 lg:grid-cols-2 gap-6 px-6">
+                    <div class=" px-3">
+                        <h4 class="text-white text-center mt-3">MISION</h4>
+                        <p class="text-white py-2">Ser un medio de difusión y promoción educativo para resaltar las experiencias y noticias en nuestro Estado Plurinacional de Bolivia, con el fin de contribuir al desarrollo y fortalecimiento del ámbito educativo y profesional del magisterio a través de un periodismo de excelencia, el mejor servicio y un alto sentido de ética personal y profesional por parte de todo el equipo que integra el periódico educaLibre.</p>
                     </div>
-                    <div class="bg-red-200 rounded-lg px-3">
-                        <h1 class="text-center ">VISION</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolore ratione quae consequatur error cumque nobis sit. Molestias magnam, recusandae vitae incidunt et vero quo quia delectus ea officia nisi.</p>
+                    <div class=" px-3">
+                        <h4 class="text-white text-center mt-3 ">VISION</h4>
+                        <p class="text-white py-2">Ser un equipo editor líder, confiable y de excelencia, cuyos contenidos periodísticos y de servicios sean los mejores, basándose siempre en un trabajo de calidad y responsabilidad, tanto para nuestros lectores como para los clientes.</p>
                     </div>
+                </div>
+            </div>
+            {{-- Sección de la OBJETIVOS--}}
+            <div id="sec3">
+                <h1 class="text-center text-2xl py-3">OBJETIVOS</h1>
+                <div class="container px-6">
+                    
+                        <p>Promover y difundir todas las experiencias pedagógicas, historia y talento de maestras y maestros, principalmente, en educación, cultura, deporte, político sindical en sus más amplios matrices y expresiones.</p>
+                        <p>Acercar, incluir y despertar la curiosidad en los lectores por conocer y valorar la experiencia de maestras y maestros de nuestro Estado Plurinacional de una manera amena y divertida.</p>
+                        <p>Impulsar el habito de la lectura, ya que con ello se aprende y se despierta la imaginación.</p>
+                        <p>Desarrollar en el lector la capacidad crítica y analítica sobre los contenidos y noticias mostrados en el periódico.</p>
+                        <p>Fomentar los valores morales que rigen al periódico, pues son estos los que sustentan a nuestro prestigio como editorial responsable, honesta y seria.</p>
+                    
                 </div>
             </div>
             {{-- Sección de la ORGANIZACION--}}
-            <div id="sec2" class="bg-blue-400">
-                <h1 class="text-center text-2xl py-4">NUESTRA ORGANZACION</h1>
-                <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 py-6">
-                    <div class="bg-red-500 ">
-                        <h1 class="text-center ">DIRECCION</h1>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+            <div id="sec2" class="bg-gray-800 py-4">
+                <h1 class="text-white text-center text-2xl py-2">NUESTRA ORGANIZACION</h1>
+                <div class="bg-gray-700 rounded container grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 py-2">
+                    <div>
+                        <h6 class="text-white font-bold">DIRECCION:</h6>
+                        <ul class="px-6">
+                            <li class="text-white">Lic. Walter Laura Soto</li>
+                            <li class="text-white">Mgtr. Ed. Freddy Yucra Leon</li>
+                            <li class="text-white">Lic. Ivan Flores Salaz</li>
                         </ul>
                     </div>
-                    <div class="bg-red-200">
-                        <h1 class="text-center ">EDICION</h1>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                    <div>
+                        <h6 class="text-white font-bold">EDICION:</h6>
+                        <ul class="px-6">
+                            <li class="text-white">Lic. Jose Mamani Luna</li>
+                            <li class="text-white">Lic. Eusevio Ordoñes Mamani</li>
+                            <li class="text-white">Lic. Mamerto caceres Bernal</li>
                         </ul>
                     </div>
-                    <div class="bg-red-600">
-                        <h1 class="text-center ">DIAGRAMACION</h1>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                    <div>
+                        <h6 class="text-white font-bold">DIAGRAMACION:</h6>
+                        <ul class="px-6">
+                            <li class="text-white">Lic. Limbre Rodriguez Luna</li>
+                            <li class="text-white">Lic. Arminda Lopez Juares</li>
+                            <li class="text-white">Lic. Ambocio Nicolas Flores</li>
                         </ul>
                     </div>
                 </div>
             </div>
-             {{-- Sección de la OBJETIVOS--}}
-             <div id="sec3" class="bg-gray-400">
-                <h1 class="text-center text-2xl py-3">OBJETIVOS</h1>
-                <div class="container px-6 py-6">
-                   <h1>objetivo general</h1>
-                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, facere. Aliquam odit magnam, fugiat error eveniet cum laboriosam explicabo, reprehenderit beatae deserunt sapiente illo tempore aliquid recusandae voluptatem totam quis?</p>
-                   <h1>objetivos especificos</h1> 
-                   <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti animi amet inventore optio aut a nam praesentium deleniti veritatis, commodi possimus voluptas laborum doloremque! Totam debitis blanditiis eaque quia quam!</P>
-                </div>
-            </div>
+             
             {{-- Sección de la nuestros ASOCIADOS--}}
-            <div id="sec4" class="bg-blue-400">
+            {{-- <div id="sec4" class="bg-blue-400">
                 <h1 class="text-center text-2xl py-4">NUESTROS ASOCIADOS</h1>
                 <div class="container grid grid-cols-1 lg:grid-cols-4 gap-6 px-6 py-6">
                     <div class="bg-red-500 ">
@@ -114,7 +117,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             {{-- Sección de la nuestros TESTIMONIO--}}
             <div id="sec5" class="bg-GRAY-400">
                 <h1 class="text-center text-2xl py-4">TESTIMONIOS</h1>
